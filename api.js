@@ -16,7 +16,7 @@ function buildFullUrl(endpoint, query, token) {
 function doRequest(method, endpoint, query, token, bodyData) {
    return Q.Promise(function(resolve, reject) {
       var handleError = function(error) {
-         fs.appendFile('request_log.txt', error);
+         fs.appendFile('request_log.txt', error + "\n");
          reject(error);
       }
 
